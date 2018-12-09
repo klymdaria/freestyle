@@ -640,11 +640,8 @@ input[type="tel"]:valid {
   border: 1px solid #0D7D0A;
 }
 
-input[type="text"]:invalid,
-input[type="email"]:invalid,
-input[type="password"]:invalid,
-input[type="number"]:invalid,
-input[type="tel"]:invalid {
+input[type="text"]:invalid input[type="text"]:focus,
+input[type="email"]:invalid input[type="email"]:focus {
   outline: none;
   border: 1px solid #ED0909;
 }
@@ -880,15 +877,20 @@ select:hover {
 
 .ba-social a {
   color: #fff;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .ba-social a:hover {
-  font-size: 20px;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+  transition: .3s ease-in;
 }
 
 .ba-social a + a {
-  margin-left: 16px;
+  margin-left: 13px;
 }
 
 .ba-footer-info__contact {
@@ -918,7 +920,7 @@ select:hover {
 .ba-block__title--history {
   word-spacing: 0;
   position: absolute;
-  bottom: 80px;
+  bottom: 153px;
 }
 
 .ba-history-main {
@@ -943,10 +945,20 @@ select:hover {
 
 .ba-history-main-concert {
   padding-top: 107px;
+  position: relative;
 }
 
 .ba-history-main-concert cite {
   padding-top: 30px;
+}
+
+.ba-history-main-concert::before {
+  content: '”';
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font: 400 96px/1.5 'Ropa Sans', sans-serif;
+  color: #042CFC;
 }
 
 .ba-history-main-video {
@@ -1025,6 +1037,166 @@ select:hover {
 
 .ba-history-main-men--big {
   padding-bottom: 55px;
+}
+
+.ba-header-news {
+  background: #201e1e url(../img/DF.jpg) no-repeat 50%;
+  background-size: cover;
+  height: 610px;
+  position: relative;
+}
+
+.ba-block__title--concerts {
+  position: absolute;
+  bottom: -30px;
+}
+
+.ba-concerts-graph {
+  padding: 157px 0 28px;
+}
+
+.ba-concerts-graph__year {
+  font-family: 'Oswald', sans-serif;
+  font-size: 100px;
+  text-align: center;
+  color: rgba(76, 71, 71, 0.5);
+}
+
+.ba-concerts-graph-time {
+  padding: 25px 0 0 35px;
+}
+
+.ba-concerts-graph-time div + div {
+  padding-bottom: 44px;
+}
+
+.ba-concerts-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ba-concerts-info div {
+  margin-right: 37px;
+}
+
+.ba-concerts-info__date {
+  text-align: center;
+}
+
+.ba-header-music {
+  background: #4C4747 url(../img/musicPhoto/music_first.jpg) no-repeat 50%;
+  background-size: cover;
+  height: 758px;
+  position: relative;
+}
+
+.ba-block__title--songs {
+  word-spacing: 0;
+  position: absolute;
+  bottom: -158px;
+}
+
+.ba-block__title--video {
+  word-spacing: 0;
+  padding: 5px 0 35px;
+}
+
+.ba-video div + div {
+  padding-bottom: 35px;
+}
+
+.ba-video div:last-of-type {
+  padding-bottom: 8px;
+}
+
+.ba-songs-list {
+  padding-top: 90px;
+  max-width: 496px;
+}
+
+.ba-play-btn {
+  background: #042CFC;
+  border-radius: 50%;
+  padding: 2px 7px;
+  margin-right: 50px;
+}
+
+.ba-play-btn:hover {
+  -webkit-box-shadow: 0px 0px 0px #042CFC;
+  box-shadow: 0px 0px 0px #042CFC;
+}
+
+.ba-play-btn i {
+  color: #fff;
+  font-size: 7px;
+  padding: 0;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.ba-play-btn--download {
+  padding: 0;
+  background: #fff;
+}
+
+.ba-play-btn--download i {
+  color: #042CFC;
+  font-size: 20px;
+  padding: 0;
+}
+
+.ba-songs-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 46px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-left: 25px;
+}
+
+.ba-songs-block .icon-pause {
+  display: none;
+}
+
+.ba-songs-block .pulse .icon-pause {
+  display: block;
+  line-height: 0;
+  padding: 9px 1px;
+}
+
+.ba-songs-block .pulse .icon-play {
+  display: none;
+}
+
+.ba-songs-block__name {
+  text-decoration: none;
+}
+
+.ba-songs-block__name {
+  display: inline-block;
+  font: 400 18px/1.3 'Roboto', sans-serif;
+  color: #4C4747;
+  margin-right: 55px;
+}
+
+.ba-songs-block__name:hover, .ba-songs-block__name:visited {
+  color: #042CFC;
+}
+
+.ba-video-socials {
+  font-size: 12px;
+  padding-top: 35px;
+  padding-bottom: 0;
+  line-height: 1.2;
+}
+
+.ba-video-socials a {
+  display: inline-block;
+  text-decoration: none;
+  color: #042CFC;
 }
 
 /*# sourceMappingURL=style.css.map */
