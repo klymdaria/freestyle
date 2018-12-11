@@ -718,6 +718,12 @@ select:hover {
   padding-top: 11px;
 }
 
+.ba-scroll {
+  position: absolute;
+  left: 83.5vw;
+  top: 72vh;
+}
+
 .ba-think {
   padding: 75px 0 64px;
 }
@@ -1118,8 +1124,19 @@ select:hover {
 .ba-play-btn {
   background: #042CFC;
   border-radius: 50%;
-  padding: 2px 7px;
+  padding: 0;
   margin-right: 50px;
+  height: 30px;
+  width: 30px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .ba-play-btn:hover {
